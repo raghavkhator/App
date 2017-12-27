@@ -14,16 +14,16 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String MovieName = intent.getStringExtra("MovieName"), Genre = intent.getStringExtra("Genre");
         TextView tv1 = (TextView) findViewById(R.id.textView2);
-        if(!MovieName.isEmpty() || !Genre.isEmpty())
-        {
+        //if(!MovieName.isEmpty() || !Genre.isEmpty())
+        //{
 
             tv1.setText("Name of the Movie is " + MovieName + ",\nwhich has a Genre- " + Genre);
 
-        }
-        else
+        //}
+        /*else
         {
             tv1.setTextColor(getResources().getColor(R.color.Red));
             tv1.setText("PLEASE ENTER A VALID INPUT");
-        }
+        }*/
     }
 }

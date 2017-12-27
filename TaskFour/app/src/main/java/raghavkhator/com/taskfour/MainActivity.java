@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -38,7 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent1= new Intent(MainActivity.this, SecondActivity.class);
         intent1.putExtra("MovieName",MovieName);
         intent1.putExtra("Genre",Genre);
-        startActivity(intent1);
+        if(!MovieName.isEmpty()||!Genre.isEmpty())
+        {startActivity(intent1);}
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Enter a Valid Input",Toast.LENGTH_SHORT).show();
+        }
 
         /*switch(v.getId()){
             case R.id.button1:
